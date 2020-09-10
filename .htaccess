@@ -1,0 +1,21 @@
+php_flag display_errors On
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^departamentos/([0-9]+)$ controller/departamento.php?idDepto=$1 [L]
+
+RewriteRule ^ciudades/([0-9]+)$ controller/ciudad.php?idCiudad=$1 [L]
+
+RewriteRule ^sucursales/([0-9]+)$ controller/sucursales.php?idSucursal=$1 [L]
+
+RewriteRule ^areas/([0-9]+)$ controller/areas.php?idArea=$1 [L]
+
+RewriteRule ^departamentos$ controller/departamento.php [L]
+
+RewriteRule ^ciudades$ controller/ciudad.php [L]
+
+RewriteRule ^sucursales$ controller/sucursales.php [L]
+
+RewriteRule ^areas$ controller/areas.php [L]
